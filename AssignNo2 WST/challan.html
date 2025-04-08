@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Challan - UOG Hostel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+        body { font-family: 'Source Sans 3', 'Bahnschrift', 'Trebuchet MS', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#E8D8C4] min-h-screen">
+    <header class="bg-[#6D2932] p-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="UOG.png" alt="UOG Logo" class="w-12">
+            <h1 class="text-white text-xl font-bold">Generate Challan</h1>
+        </div>
+        <a href="login.html" class="bg-white text-[#6D2932] px-6 py-2 rounded hover:bg-[#E8D8C4] transition">
+            Logout
+        </a>
+    </header>
+
+    <nav class="bg-[#9E616E] p-4 flex gap-6 justify-center">
+        <a href="admin.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Dashboard</a>
+        <a href="challan.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Generate Challan</a>
+        <a href="attendance.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Attendance</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="bg-white rounded-xl p-6 shadow">
+            <h2 class="text-xl font-bold text-[#6D2932] mb-6">Generate Payment Challan</h2>
+            <form class="space-y-4">
+                <input type="text" 
+                       class="w-full p-3 border rounded-lg border-[#E8D8C4] focus:outline-[#9E616E]"
+                       placeholder="Student ID">
+                <input type="number" 
+                       class="w-full p-3 border rounded-lg border-[#E8D8C4] focus:outline-[#9E616E]"
+                       placeholder="Amount">
+                <input type="date" 
+                       class="w-full p-3 border rounded-lg border-[#E8D8C4] focus:outline-[#9E616E]">
+                <button class="w-full bg-[#6D2932] text-white py-3 rounded-lg hover:bg-[#9E616E] transition">
+                    Generate Challan
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

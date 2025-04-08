@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - UOG Hostel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+        body { font-family: 'Source Sans 3', 'Bahnschrift', 'Trebuchet MS', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#E8D8C4] min-h-screen">
+    <header class="bg-[#6D2932] p-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="UOG.png" alt="UOG Logo" class="w-12">
+            <h1 class="text-white text-xl font-bold">Admin Dashboard</h1>
+        </div>
+        <a href="login.html" class="bg-white text-[#6D2932] px-6 py-2 rounded hover:bg-[#E8D8C4] transition">
+            Logout
+        </a>
+    </header>
+
+    <nav class="bg-[#9E616E] p-4 flex gap-6 justify-center">
+        <a href="admin.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Dashboard</a>
+        <a href="challan.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Generate Challan</a>
+        <a href="attendance.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Attendance</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="bg-white rounded-xl p-6 shadow mb-6">
+            <h2 class="text-xl font-bold text-[#6D2932] mb-4">Quick Actions</h2>
+            <div class="flex gap-4 flex-wrap">
+                <button class="bg-[#6D2932] text-white px-6 py-2 rounded hover:bg-[#9E616E] transition">
+                    Manage Students
+                </button>
+                <button class="bg-[#6D2932] text-white px-6 py-2 rounded hover:bg-[#9E616E] transition">
+                    Meal Pricing
+                </button>
+                <button class="bg-[#6D2932] text-white px-6 py-2 rounded hover:bg-[#9E616E] transition">
+                    Send Notice
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow">
+            <h3 class="font-bold text-[#6D2932] mb-3">Recent Activity</h3>
+            <p class="text-gray-600">No recent activities</p>
+        </div>
+    </div>
+</body>
+</html>
