@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - UOG Hostel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+        body { font-family: 'Source Sans 3', 'Bahnschrift', 'Trebuchet MS', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#E8D8C4] min-h-screen">
+    <header class="bg-[#6D2932] p-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="UOG.png" alt="UOG Logo" class="w-12">
+            <h1 class="text-white text-xl font-bold">Attendance Records</h1>
+        </div>
+        <a href="login.html" class="bg-white text-[#6D2932] px-6 py-2 rounded hover:bg-[#E8D8C4] transition">
+            Logout
+        </a>
+    </header>
+
+    <nav class="bg-[#9E616E] p-4 flex gap-6 justify-center">
+        <a href="student.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Dashboard</a>
+        <a href="attendance.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Attendance</a>
+        <a href="challan.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Challan</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="bg-white rounded-xl p-6 shadow">
+            <h2 class="text-xl font-bold text-[#6D2932] mb-6">Meal Attendance History</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-[#6D2932] text-white">
+                        <tr>
+                            <th class="p-3 text-left">Date</th>
+                            <th class="p-3 text-left">Meal Type</th>
+                            <th class="p-3 text-left">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-[#E8D8C4]">
+                            <td class="p-3">2023-11-01</td>
+                            <td class="p-3">Dinner</td>
+                            <td class="p-3 text-green-600 font-bold">Present</td>
+                        </tr>
+                        <!-- Add more rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 2. Bulk Approval
+        const approveSelected = () => {
+            document.querySelectorAll('.attendance-checkbox:checked').forEach(checkbox => {
+                updateAttendanceStatus(checkbox.dataset.id, 'approved');
+            });
+        };
+        
+        // 3. Export Options
+        const exportAttendance = (format) => {
+            switch(format) {
+                case 'csv': exportToCSV(); break;
+                case 'pdf': exportToPDF(); break;
+            }
+        };
+        
+       
+      
+        
+        // 6. Visual Indicators
+        const updateStatusIndicator = (statusElement) => {
+            statusElement.className = `status ${statusElement.textContent.toLowerCase()}`;
+        };
+        
+        // 7. Undo Action
+        let lastAction;
+        const undoLastAction = () => {
+            if(lastAction) lastAction.undo();
+        };
+        
+       
+        
+        // 9. Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if(e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                saveAttendance();
+            }
+        });
+        
+        // 10. Responsive Design
+        const handleResponsiveDesign = () => {
+            if(window.innerWidth < 768) {
+                document.body.classList.add('mobile-view');
+            }
+        };</script>
+</body>
+</html>

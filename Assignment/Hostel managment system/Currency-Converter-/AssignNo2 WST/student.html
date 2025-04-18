@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - UOG Hostel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+        body { font-family: 'Source Sans 3', 'Bahnschrift', 'Trebuchet MS', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#E8D8C4] min-h-screen">
+    <header class="bg-[#6D2932] p-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="UOG.png" alt="UOG Logo" class="w-12">
+            <h1 class="text-white text-xl font-bold">Student Dashboard</h1>
+        </div>
+        <a href="login.html" class="bg-white text-[#6D2932] px-6 py-2 rounded hover:bg-[#E8D8C4] transition">
+            Logout
+        </a>
+    </header>
+
+    <nav class="bg-[#9E616E] p-4 flex gap-6 justify-center">
+        <a href="student.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Dashboard</a>
+        <a href="attendance.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Attendance</a>
+        <a href="challan.html" class="text-white hover:bg-white/10 px-4 py-2 rounded transition">Challan</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="bg-white rounded-xl p-6 shadow mb-6">
+            <h2 class="text-xl font-bold text-[#6D2932] mb-4">Welcome, Student</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-[#E8D8C4] p-4 rounded-lg">
+                    <h4 class="font-bold text-[#6D2932]">Current Balance</h4>
+                    <p class="text-2xl mt-2">Rs. 12,500</p>
+                </div>
+                <div class="bg-[#E8D8C4] p-4 rounded-lg">
+                    <h4 class="font-bold text-[#6D2932]">Meal Attendance</h4>
+                    <p class="text-2xl mt-2">85% Present</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow">
+            <h3 class="font-bold text-[#6D2932] mb-3">Recent Notices</h3>
+            <p class="text-gray-600">Hostel inspection on 15th November</p>
+        </div>
+    </div>
+</body>
+</html>
